@@ -1,0 +1,19 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+textarea {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+   border: 1px solid white;
+   resize: none;
+}
+
+.editable {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+   border: 1px solid white;
+   resize: none;
+   width: 50em;
+   height: 15em;
+}

@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <meta charset="UTF-8"></meta>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,800|Roboto+Mono&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div id="app">
+      <h1>{{ name }}</h1>
+      <fix-message v-model="text"></fix-message>
+      <output-message v-model="humanized_message"></output-message>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
