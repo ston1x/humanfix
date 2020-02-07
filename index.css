@@ -9,11 +9,17 @@ textarea {
    resize: none;
 }
 
-.editable {
-  font-family: 'Roboto Mono', monospace;
-  font-size: 14px;
-   border: 1px solid white;
-   resize: none;
-   width: 50em;
-   height: 15em;
+.description {
+  font-size: 12px;
+  color: #757575;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3rem;
+    width: 100%;
+    overflow: hidden;
+    padding-left: 1rem;
 }

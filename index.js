@@ -19,12 +19,8 @@ Vue.component('fix-message', {
   </textarea>
   `,
   methods: {
-    humanizeFix: function (what) {
-      fixed = what.replace(/\\u0001/gi, '\n')
-      console.log(fixed)
-      app.humanized_message = fixed
-      // parsed_message.value = what + "!"
-      // alert(this.text)
+    humanizeFix: function (fix_string) {
+      app.humanized_message = fix_string.replace(/\\u0001/gi, '\n')
     }
   }
 })
@@ -48,12 +44,8 @@ var app = new Vue({
   el: '#app',
   data: {
     name: 'humanfix',
+    description: 'I can humanize FIX messages a little – try dropping one',
     humanized_message: ''
-  },
-  methods: {
-    humanizeFixMessage() {
-      alert("AAA")
-    }
   }
 })
 
