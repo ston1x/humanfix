@@ -44,7 +44,6 @@ var app = new Vue({
   el: '#app',
   data: {
     name: 'humanfix',
-    description: 'I can humanize FIX messages a little – try dropping one',
     humanized_message: ''
   }
 })
