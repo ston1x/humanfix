@@ -1,10 +1,3 @@
-var parsed_message = new Vue({
-  data: {
-    value: ''
-  }
-}
-)
-
 Vue.component('fix-message', {
   props: ['value'],
   template: `
@@ -21,6 +14,7 @@ Vue.component('fix-message', {
   methods: {
     humanizeFix: function (fix_string) {
       app.humanized_message = fix_string.replace(/\\u0001/gi, '\n')
+      app.parsed_message = 'future parsed message'
     }
   }
 })
@@ -40,11 +34,27 @@ Vue.component('output-message', {
   `
 })
 
+Vue.component('parsed-message', {
+  props: ['value'],
+  template: `
+  <textarea
+    rows=15
+    cols=50
+    readonly
+    id="parsed_message"
+    placeholder="your parsed message will be here"
+    v-bind:value="value"
+    >
+  </textarea>
+  `
+})
+
 var app = new Vue({
   el: '#app',
   data: {
     name: 'humanfix',
-    humanized_message: ''
+    humanized_message: '',
+    parsed_message: ''
   }
 })
 
